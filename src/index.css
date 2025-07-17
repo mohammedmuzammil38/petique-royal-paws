@@ -243,7 +243,7 @@
   }
 
   .card-product {
-    @apply card-luxury p-8 hover:shadow-golden group cursor-pointer;
+    @apply card-luxury p-8 hover:shadow-golden cursor-pointer;
   }
 }
 
