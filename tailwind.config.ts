@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'display': ['Playfair Display', 'serif'],
+				'body': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Petique Royal Palette
+				'ethereal-lavender': 'hsl(var(--ethereal-lavender))',
+				'deep-amethyst': 'hsl(var(--deep-amethyst))',
+				'liquid-gold': 'hsl(var(--liquid-gold))',
+				'pearl-white': 'hsl(var(--pearl-white))',
+				'midnight-purple': 'hsl(var(--midnight-purple))',
+				'platinum-silver': 'hsl(var(--platinum-silver))',
+				'rose-gold': 'hsl(var(--rose-gold))',
+				'champagne': 'hsl(var(--champagne))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

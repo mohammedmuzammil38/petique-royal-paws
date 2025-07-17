@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Petique Luxury Design System - Royal Pet Food Excellence */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Petique Royal Color Palette */
+    --ethereal-lavender: 240 67% 94%;
+    --deep-amethyst: 270 50% 60%;
+    --liquid-gold: 51 100% 50%;
+    --pearl-white: 240 100% 99%;
+    --midnight-purple: 258 55% 25%;
+    --platinum-silver: 240 8% 90%;
+    --rose-gold: 9 58% 82%;
+    --champagne: 39 57% 89%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Semantic Design Tokens */
+    --background: var(--pearl-white);
+    --foreground: var(--midnight-purple);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: var(--pearl-white);
+    --card-foreground: var(--midnight-purple);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: var(--pearl-white);
+    --popover-foreground: var(--midnight-purple);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--deep-amethyst);
+    --primary-foreground: var(--pearl-white);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: var(--ethereal-lavender);
+    --secondary-foreground: var(--midnight-purple);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: var(--platinum-silver);
+    --muted-foreground: 258 25% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: var(--liquid-gold);
+    --accent-foreground: var(--midnight-purple);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--pearl-white);
 
-    --radius: 0.5rem;
+    --border: var(--platinum-silver);
+    --input: var(--ethereal-lavender);
+    --ring: var(--liquid-gold);
+
+    /* Luxury Gradients */
+    --gradient-royal: linear-gradient(135deg, hsl(var(--deep-amethyst)), hsl(var(--midnight-purple)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--liquid-gold)), hsl(var(--champagne)));
+    --gradient-ethereal: linear-gradient(180deg, hsl(var(--pearl-white)), hsl(var(--ethereal-lavender)));
+    --gradient-luxury: linear-gradient(45deg, hsl(var(--rose-gold)), hsl(var(--liquid-gold)), hsl(var(--champagne)));
+
+    /* Elegant Shadows */
+    --shadow-royal: 0 20px 60px -20px hsl(var(--deep-amethyst) / 0.3);
+    --shadow-golden: 0 15px 50px -15px hsl(var(--liquid-gold) / 0.4);
+    --shadow-ethereal: 0 10px 40px -10px hsl(var(--ethereal-lavender) / 0.5);
+    --shadow-floating: 0 25px 80px -25px hsl(var(--midnight-purple) / 0.2);
+
+    /* Luxury Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Refined Spacing */
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +128,143 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+    background: var(--gradient-ethereal);
+    min-height: 100vh;
   }
+
+  /* Royal Typography */
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  /* Luxury Gradient Utilities */
+  .bg-gradient-royal {
+    background: var(--gradient-royal);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-ethereal {
+    background: var(--gradient-ethereal);
+  }
+
+  .bg-gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+
+  /* Royal Shadow Utilities */
+  .shadow-royal {
+    box-shadow: var(--shadow-royal);
+  }
+
+  .shadow-golden {
+    box-shadow: var(--shadow-golden);
+  }
+
+  .shadow-ethereal {
+    box-shadow: var(--shadow-ethereal);
+  }
+
+  .shadow-floating {
+    box-shadow: var(--shadow-floating);
+  }
+
+  /* Elegant Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+
+  .animate-paw-bounce {
+    animation: pawBounce 2s ease-in-out infinite;
+  }
+
+  /* Custom Cursor */
+  .cursor-paw {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23FFD700'%3E%3Cpath d='M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-3 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-3 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z'/%3E%3C/svg%3E") 12 12, auto;
+  }
+}
+
+@layer components {
+  /* Luxury Button Variants */
+  .btn-royal {
+    @apply bg-gradient-royal text-primary-foreground px-8 py-4 rounded-full font-display font-semibold tracking-wide shadow-royal hover:shadow-floating transition-all duration-500 transform hover:scale-105;
+  }
+
+  .btn-golden {
+    @apply bg-gradient-gold text-accent-foreground px-8 py-4 rounded-full font-display font-semibold tracking-wide shadow-golden hover:shadow-floating transition-all duration-500 transform hover:scale-105;
+  }
+
+  .btn-ethereal {
+    @apply bg-gradient-ethereal text-secondary-foreground px-8 py-4 rounded-full font-body font-medium border-2 border-primary/20 hover:border-primary/40 transition-all duration-500 transform hover:scale-105;
+  }
+
+  /* Glass Morphism */
+  .glass-royal {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-floating;
+  }
+
+  .glass-golden {
+    @apply bg-yellow-50/30 backdrop-blur-xl border border-yellow-200/30 shadow-golden;
+  }
+
+  /* Text Effects */
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-royal {
+    background: var(--gradient-royal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Elegant Cards */
+  .card-luxury {
+    @apply bg-card/80 backdrop-blur-sm border border-border/30 rounded-2xl shadow-ethereal hover:shadow-floating transition-all duration-500 transform hover:-translate-y-2;
+  }
+
+  .card-product {
+    @apply card-luxury p-8 hover:shadow-golden group cursor-pointer;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px hsl(var(--liquid-gold) / 0.4); }
+  100% { box-shadow: 0 0 40px hsl(var(--liquid-gold) / 0.8); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pawBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(-5deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(-5px) rotate(5deg); }
 }
